@@ -2,7 +2,7 @@ use yew::prelude::*;
 
 #[function_component(App)]
 fn app() -> Html {
-    let foo = "bar";
+    let my_variable_string = "bar";
 
     html! {
         <>
@@ -15,7 +15,7 @@ fn app() -> Html {
                 <p>{ "4" }</p>
             </div>
             <div>
-                <p>{ foo }</p>
+                <p>{ my_variable_string }</p>
             </div>
         </>
     }

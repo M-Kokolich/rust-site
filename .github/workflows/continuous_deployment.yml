@@ -28,7 +28,7 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
 
       - name: Build Yew Project
-        run: trunk build --release --public-url /${{ github.event.repository.name }}/
+        run: trunk build --release --public-url /
 
       - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3

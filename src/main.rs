@@ -17,6 +17,19 @@ enum Route {
     NotFound,
 }
 
+#[function_component(Home)]
+fn home() -> Html {
+    let navigator = use_navigator().unwrap();
+
+    let onclick = Callback::from(move |_| navigator.push(&Route::Blog1));
+    html! {
+        <div>
+            <h1>{ "Supa Site" }</h1>
+            <button {onclick}>{ "Go to Blog1" }</button>
+        </div>
+    }
+}
+
 #[function_component(Blog1)]
 fn blog1() -> Html {
     let navigator = use_navigator().unwrap();
@@ -129,7 +142,9 @@ fn blog2() -> Html {
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => html! { <h1>{ "Supa Test 1" }</h1> },
+        Route::Home => html! {
+           <Home />
+        },
         Route::Blog1 => html! {
             <Blog1 />
         },

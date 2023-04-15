@@ -1,6 +1,6 @@
-use yew_router::prelude::*;
+use stylist::Style;
 use yew::prelude::*;
-use stylist::{Style};
+use yew_router::prelude::*;
 
 const STYLE_FILE: &str = include_str!("main.css");
 
@@ -30,10 +30,10 @@ fn blog1() -> Html {
                 <div class={classes!("main-content-container")}>
                     <h1>{ "Creating and Deploying a Yew Application" }</h1>
                     <h3>{ "aka. Stevie Wonder's "} <a href="https://www.youtube.com/watch?v=zOW2UfvWWAE">{ "\"Yew and Eye\"" }</a></h3>
-                    
+
                     <p>{ "The web is an inherently concurrent environment. Many users may connect to a single server, which must respond in kind and handle race conditions appropriately and with care. Rust, having being built from the ground up with concurrency in mind, is well-suited to applications in web development." }</p>
                     <p>{ "This blog post is part of a series that will explore the current landscape of web development tools utilising Rust's unique advantages in the domain of web development, as well as act as a tutorial on how to create a simple web app." }</p>
-                    
+
                     <h2>{ "Part 0: Rust in the browser?" }</h2>
                     <p>{ "The secret sauce that brings this all together is "} <a href="https://webassembly.org/">{ "WebAssembly" }</a> {". The specifics of how Wasm works is out of the scope of this blog, but TLDR: WebAssembly exists in an assembly-like form and a binary form, which can be set as a compilation target for your favourite programming languages including C++, Rust, etc." }</p>
                     <p>{ "WebAssembly doesn't include a garbage collector natively, which was a pain for some languages, however Rust's robust ownership and borrow checking system made for an expedient shortcut when integrating Rust with Wasm. As such, there are a " } <a href="https://www.makeuseof.com/rust-webassembly-frameworks/">{ "number" }</a> { " of WebAssembly frameworks for Rust." }</p>
@@ -53,7 +53,7 @@ fn blog1() -> Html {
                     <p>{ "Add Yew as a dependancy in cargo.toml:" }</p>
                     <p class="code-snippet">{ "yew = { version = \"0.20.0\", features = [\"csr\"] }" }</p>
                     <p>{ "Copy paste some sample project code from the " } <a href="https://yew.rs/docs/getting-started/build-a-sample-app#update-mainrs">{ "Yew docs" }</a>{ " into main.rs." }</p>
-                    
+
                     <p>{ "Create a new file, index.html, in the root of project folder. Similarly copy paste the snippet from the "} <a href="https://yew.rs/docs/getting-started/build-a-sample-app#create-indexhtml">{ "Yew docs" }</a> { "." }</p>
                     <p>{ "You can now view the web page locally with:" }</p>
                     <p class="code-snippet">{ "trunk serve --open" }</p>
@@ -63,7 +63,7 @@ fn blog1() -> Html {
                     <h2>{ "Part 2: Deploying our Project" }</h2>
                     <p>{ "We will be deploying our project with Github Pages." }</p>
                     <p>{ "Create a git repo from the root of your project files with " } <span class="code-snippet">{ "git init" }</span> { "." }</p>
-                    <p>{ "Do all the usual steps to add and commit your project files, then push them to remote." }</p>                    
+                    <p>{ "Do all the usual steps to add and commit your project files, then push them to remote." }</p>
                     <p>{ "When we built our project, notice that it added a " } <span class="code-snippet">{ ".html" }</span> {", "} <span class="code-snippet">{ ".wasm" }</span> {" and "} <span class="code-snippet">{ ".js" }</span> { " file to the " } <span class="code-snippet">{ "/dist" }</span> { " folder in our source branch." }</p>
                     <p>{ "These are the source files for our website that get read by the browser and displayed to the user. By default, GitHub Pages looks for source files in the root (" } <span class="code-snippet">{ "/" }</span> { "), a " } <span class="code-snippet">{ "/docs" }</span> { " folder or source files in either of these locations on the " } <span class="code-snippet">{ "gh-pages" }</span> { " branch of your repo as a " } <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#about-publishing-sources">{ "publishing source" }</a> { "." } </p>
                     <p>{ "First, we create an empty " } <span class="code-snippet">{ "gh-pages" }</span> { " branch."}</p>
@@ -74,10 +74,10 @@ fn blog1() -> Html {
                     <p class="code-snippet">{ "git push -u origin gh-pages" }</p>
                     <p>{ "Don't forget to switch back to main." }</p>
                     <p class="code-snippet">{ "git checkout main" }</p>
-                    
+
                     <p>{ "Now let's enable GitHub Pages. Navigate to your repo on Github -> Settings -> Pages -> Build and Deployment. Tell GitHub you want to deploy from the root of the newly-crated " } <span class="code-snippet">{ "gh-pages" }</span> { " branch."}</p>
                     <p>{ "Your deplopyoment settings should look like this:" }</p>
-                    <img src="img/gh-pages-deployment-settings.png" alt="image"/> 
+                    <img src="img/gh-pages-deployment-settings.png" alt="image"/>
                     <p>{ "For a more comprehensive set-up guide, check out the " } <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">{ "GitHub Pages docs" }</a>{ "." }</p>
 
                     <p>{ "But building and pushing source files to a seperate branch every time we make code changes sounds annoying. So let's set up some CI/CD with GitHub Actions." }</p>
@@ -107,7 +107,7 @@ fn blog1() -> Html {
                     <h3><a href="https://www.youtube.com/watch?v=P4LMfkFLRsI">{ "Rust & Wasm - No Boilererplate" }</a></h3>
                     <h3><a href="https://plippe.github.io/blog/2021/07/12/rust-wasm-github.html">{ "Rust Wasm Github - Plippe" }</a></h3>
                     <h3><a href="https://yew.rs/docs/tutorial">{ "Getting Started Tutorial - Yew" }</a></h3>
-                    <h3 style="margin-bottom: 40px;"><a href="https://docs.github.com/en/actions/quickstart">{ "Quickstart Tutorial - GitHub Actions" }</a></h3>                    
+                    <h3 style="margin-bottom: 40px;"><a href="https://docs.github.com/en/actions/quickstart">{ "Quickstart Tutorial - GitHub Actions" }</a></h3>
                 </div>
             </div>
         </div>

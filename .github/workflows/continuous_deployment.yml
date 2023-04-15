@@ -19,8 +19,16 @@ jobs:
 
       - uses: actions/checkout@v2
 
+      - run: echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
+
+      - name: Dump github context
+        run:   echo "$GITHUB_CONTEXT"
+        shell: bash
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+
       - name: Build Yew Project
-        run: trunk build --release --public-url http://supa.fish/
+        run: trunk build --release --public-url /${{ github.event.repository.name }}/
 
       - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3

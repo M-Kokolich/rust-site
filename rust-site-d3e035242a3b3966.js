@@ -808,16 +808,16 @@ function getImports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper928 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 343, __wbg_adapter_36);
+    imports.wbg.__wbindgen_closure_wrapper699 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 298, __wbg_adapter_36);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper1285 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 457, __wbg_adapter_39);
+    imports.wbg.__wbindgen_closure_wrapper1050 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 410, __wbg_adapter_39);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper1342 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 483, __wbg_adapter_42);
+    imports.wbg.__wbindgen_closure_wrapper1107 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 437, __wbg_adapter_42);
         return addHeapObject(ret);
     };
 
@@ -856,7 +856,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('rust-site-b7d348df086800db_bg.wasm', import.meta.url);
+        input = new URL('rust-site-d3e035242a3b3966_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 

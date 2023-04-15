@@ -129,7 +129,7 @@ fn blog2() -> Html {
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => html! { <h1>{ "Home" }</h1> },
+        Route::Home => html! { <h1>{ "Supa Fish" }</h1> },
         Route::Blog1 => html! {
             <Blog1 />
         },

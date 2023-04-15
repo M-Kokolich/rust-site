@@ -19,13 +19,9 @@ enum Route {
 
 #[function_component(Home)]
 fn home() -> Html {
-    let navigator = use_navigator().unwrap();
-
-    let onclick = Callback::from(move |_| navigator.push(&Route::Blog1));
     html! {
         <div>
-            <h1>{ "404 Test 1" }</h1>
-            <button {onclick}>{ "Go to Blog1" }</button>
+            <h1>{ "Supa Site" }</h1>
         </div>
     }
 }

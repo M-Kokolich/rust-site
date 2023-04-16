@@ -1,16 +1,11 @@
-body {
-    margin: 0;
-}
-
 .blog-body {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: max-content;
+    width: 100vw;
     background-color: rgb(0, 19, 47);
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -21,7 +16,7 @@ body {
     margin: 0;
 }
 
-.main-content-container {
+.blog-content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,40 +27,43 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-.main-content-container h1 {
+.blog-content-container h1 {
     color: white;
     font-size: 2em;
 }
 
-.main-content-container h2 {
+.blog-content-container h2 {
     color: white;
     font-size: 1.2em;
     font-style: italic;
 }
 
-.main-content-container h3 {
+.blog-content-container h3 {
     color: #6b6b6b;
     font-size: 0.8em;
     font-style: italic;
+}
+
+.blog-content-container h3.subtitle {
     margin-top: -20px;
 }
 
-.main-content-container p {
+.blog-content-container p {
     font-size: 1em;
     max-width: 800px;
     color: white;
     line-height: 1.2;
 }
 
-.main-content-container a:link {
+.blog-content-container a:link {
     color: rgb(179, 255, 245);
 }
 
-.main-content-container a:visited {
+.blog-content-container a:visited {
     color: rgb(255, 179, 223);
 }
 
-.main-content-container img {
+.blog-content-container img {
     max-width: 800px;
     height: auto;
 }

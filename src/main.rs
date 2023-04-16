@@ -12,7 +12,7 @@ pub const STYLE_FILE: &str = include_str!("styles/blog.css");
 fn App() -> Html {
     html! {
         <BrowserRouter>
-            <Switch<crate::Route> render={switch} />
+            <Switch<Route> render={switch} />
         </BrowserRouter>
     }
 }

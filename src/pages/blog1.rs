@@ -91,7 +91,7 @@ pub fn component() -> Html {
                     <h3 class="subtitle"><a href="https://bevy-cheatbook.github.io/platforms/wasm.html">{ "Deploying Wasm with Rust - Bevy Cheatbook" }</a></h3>
                     <h3 class="subtitle"><a href="https://www.youtube.com/watch?v=P4LMfkFLRsI">{ "Rust & Wasm - No Boilererplate" }</a></h3>
                     <h3 class="subtitle"><a href="https://plippe.github.io/blog/2021/07/12/rust-wasm-github.html">{ "Rust Wasm Github - Plippe" }</a></h3>
-                    <h3 class="subtitle"><a href="https://yew.rs/docs/tutorial">{ "Getting Started Tutorial - Yew" }</a></h3>
+                    <h3 class="subtitle"><a href="https://yew.rs/docs/tutorial">{ "Getting Started Tutorial - Yew Docs" }</a></h3>
                     <h3 class="subtitle" style="margin-bottom: 40px;"><a href="https://docs.github.com/en/actions/quickstart">{ "Quickstart Tutorial - GitHub Actions" }</a></h3>
                 </div>
             </div>

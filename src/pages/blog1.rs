@@ -8,6 +8,14 @@ use crate::router::Route;
 pub fn component() -> Html {
     let stylesheet = Style::new(crate::STYLE_FILE).unwrap();
 
+    let first_load = use_state(|| true);
+    use_effect(move || {
+        if *first_load {
+            gloo_utils::document_element().set_scroll_top(0);
+            first_load.set(false);
+        }
+    });
+
     html! {
         <div class={classes!(stylesheet)}>
             <div class="blog-body">
